@@ -1,5 +1,5 @@
 FROM debian:latest
-RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get -y upgrade && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 RUN chmod 0700 ~
 RUN chmod 0700 ~/.ssh
