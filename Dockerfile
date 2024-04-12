@@ -2,7 +2,6 @@ FROM debian:latest
 RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 RUN chmod 0700 ~
-RUN mkdir ~/.ssh
 RUN chmod 0700 ~/.ssh
 # Set root password for SSH access (change 'your_password' to your desired password)
 RUN echo 'root:pass' | chpasswd
