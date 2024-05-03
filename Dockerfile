@@ -1,4 +1,5 @@
 FROM debian:latest
+RUN usermod --unlock root
 RUN apt-get update && apt-get -y upgrade && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 RUN chmod 0700 ~
